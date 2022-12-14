@@ -1,2 +1,25 @@
-<p>pag-inicial works!</p>
-<button routerLink="whoYa" >acessar</button>
+<div class="card">
+  <div class="card-header">
+    <p>Faça o cadastro do cliente</p>
+    <button routerLink="cadastro-cliente" >acessar</button>
+  </div>
+  <div class="card-body">
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Senha</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of cadastro">
+                  <td>{{item.name}}</td>
+                  <td>{{item.email}}</td>
+                  <td>{{ item.password }}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

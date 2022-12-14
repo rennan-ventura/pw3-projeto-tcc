@@ -8,7 +8,6 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 import { PagInicialComponent } from './pag-inicial/pag-inicial.component';
-import { WhoYaComponent } from './who-ya/who-ya.component';
 import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
@@ -18,7 +17,6 @@ import {HttpClientModule} from '@angular/common/http'
     HomeComponent,
     CadastroClienteComponent,
     PagInicialComponent,
-    WhoYaComponent,
   ],
   imports: [
     BrowserModule,

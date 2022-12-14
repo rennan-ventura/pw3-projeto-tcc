@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TccService } from '../services/tcc.service';
 
 @Component({
   selector: 'app-pag-inicial',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagInicialComponent implements OnInit {
 
-  constructor() { }
+  cadastros: Array<any> = [];
 
-  ngOnInit(): void {
+  constructor(private tccService: TccService) { }
+
+  ngOnInit(){
+    return this.listarCadastro()
+  }
+
+  listarCadastro()
+  {
+    this.tccService.listarTodas().subscribe(e => this.cadastros = e)
   }
 
 }
